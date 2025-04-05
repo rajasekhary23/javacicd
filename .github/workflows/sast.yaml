@@ -1,0 +1,16 @@
+# JAVA SAST job
+# This job is used to run SAST tools on the Java codebase.
+
+on:
+  workflow_call:
+
+jobs:
+  sast_scan:
+    name: Run Bandit Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+    
+    
